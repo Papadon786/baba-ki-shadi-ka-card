@@ -1,0 +1,63 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
+
+export default function AudioPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = new Audio("/invitation/audio/soundtrack.mp3");
+    audio.loop = true;
+    audio.volume = 0.5;
+    audioRef.current = audio;
+
+    return () => {
+      audio.pause();
+      audio.src = "";
+    };
+  }, []);
+
+  const toggleAudio = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch((e) => console.log("Audio playback error:", e));
+    }
+  };
+
+  return (
+    <button
+      onClick={toggleAudio}
+      aria-label={isPlaying ? "Mute atmospheric music" : "Play atmospheric music"}
+      className="fixed top-4 left-4 z-50 flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur-md bg-black/50 border border-[#dfba73]/40 text-[#dfba73] hover:border-[#dfba73] hover:bg-black/70 transition-all duration-300 shadow-lg group cursor-pointer"
+    >
+      {isPlaying ? (
+        <>
+          <div className="flex items-end gap-[2px] h-3 w-3.5">
+            <span className="w-[2px] bg-[#dfba73] rounded-full animate-[pulse_0.7s_ease-in-out_infinite] h-full" />
+            <span className="w-[2px] bg-[#dfba73] rounded-full animate-[pulse_0.9s_ease-in-out_infinite_0.2s] h-3/4" />
+            <span className="w-[2px] bg-[#dfba73] rounded-full animate-[pulse_0.6s_ease-in-out_infinite_0.4s] h-4/5" />
+          </div>
+          <span className="text-[10px] tracking-widest uppercase font-cinzel font-semibold opacity-90 hidden sm:inline">
+            Music
+          </span>
+          <Volume2 className="w-3.5 h-3.5 opacity-80 group-hover:opacity-100" />
+        </>
+      ) : (
+        <>
+          <VolumeX className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100" />
+          <span className="text-[10px] tracking-widest uppercase font-cinzel font-semibold opacity-80 hidden sm:inline">
+            Sound
+          </span>
+        </>
+      )}
+    </button>
+  );
+}

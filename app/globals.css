@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #070103;
+  --velvet-burgundy: #260208;
+  --velvet-deep: #160104;
+  --royal-crimson: #4e0513;
+  --gold-primary: #dfba73;
+  --gold-light: #fdedc9;
+  --gold-dark: #8c6a28;
+  --warm-ivory: #faf5ed;
+  --cream-card: #f8f2e7;
+  --card-shadow: rgba(0, 0, 0, 0.45);
+}
+
+@theme inline {
+  --font-cinzel: var(--font-cinzel), serif;
+  --font-cormorant: var(--font-cormorant), Georgia, serif;
+  --font-pinyon: var(--font-pinyon), cursive;
+  --font-amiri: var(--font-amiri), serif;
+}
+
+/* Base resets and luxury styling */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--warm-ivory);
+  font-family: var(--font-cormorant), Georgia, serif;
+  overflow-x: clip;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom gold gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fff5d6 0%, #e8c988 28%, #dfba73 50%, #b88d38 75%, #fbe7bd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(180deg, #fdf6e6 0%, #e2c079 50%, #ba913d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(223, 186, 115, 0.35);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(223, 186, 115, 0.45);
+  box-shadow: 0 0 15px rgba(223, 186, 115, 0.15), inset 0 0 15px rgba(223, 186, 115, 0.05);
+}
+
+.gold-glow {
+  text-shadow: 0 0 12px rgba(223, 186, 115, 0.5), 0 0 25px rgba(223, 186, 115, 0.2);
+}
+
+.box-gold-glow {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(223, 186, 115, 0.3);
+}
+
+.royal-card {
+  background: linear-gradient(165deg, rgba(38, 4, 12, 0.85) 0%, rgba(20, 2, 6, 0.95) 100%);
+  border: 1px solid rgba(223, 186, 115, 0.3);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 235, 185, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.royal-card-inner {
+  background: radial-gradient(circle at 50% 0%, rgba(70, 7, 20, 0.4) 0%, rgba(18, 2, 5, 0.9) 100%);
+}
+
+/* Breathing animation for tap to open */
+@keyframes breathing {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(0.985);
+    filter: drop-shadow(0 0 4px rgba(223, 186, 115, 0.2));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.015);
+    filter: drop-shadow(0 0 14px rgba(223, 186, 115, 0.6));
+  }
+}
+
+.animate-breathing {
+  animation: breathing 3.2s ease-in-out infinite;
+}
+
+/* Subtle candle flame flicker */
+@keyframes candleFlicker {
+  0%, 100% {
+    opacity: 0.85;
+    filter: brightness(1);
+  }
+  25% {
+    opacity: 0.95;
+    filter: brightness(1.08);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(0.94);
+  }
+  75% {
+    opacity: 1;
+    filter: brightness(1.12);
+  }
+}
+
+.animate-flicker {
+  animation: candleFlicker 4s ease-in-out infinite alternate;
+}
+
+/* Subtle float animation */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+/* Hide scrollbars for clean full-screen feel */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #080204;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(223, 186, 115, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(223, 186, 115, 0.6);
+}
+
+/* Hide Next.js development toast/indicators for pristine presentation */
+nextjs-portal,
+[data-nextjs-toast],
+#__next-build-watcher,
+[data-nextjs-route-announcer] {
+  display: none !important;
+}
