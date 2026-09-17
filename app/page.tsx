@@ -80,7 +80,7 @@ export default function Home() {
           {/* 1. Primary Invitation Intro Frame (Live HTML typography) */}
           <InvitationIntro />
 
-          {/* 2. Union & Blessing ("A love written in the stars") */}
+          {/* 2. Union & Blessing ("Join us for the union of two souls") */}
           <UnionBlessing />
 
           {/* 3. Interactive Scratch-to-Reveal Date Card */}
@@ -92,7 +92,7 @@ export default function Home() {
           {/* 5. The Celebration (Event Timeline: 8, 10, 12 Dec 2026) */}
           <EventTimeline />
 
-          {/* 6. The Venues (Shivam Palace & Akbarpur Residence + Google Maps) */}
+          {/* 6. The Venues (Shivam Palace & Shanti Upvan + Google Maps) */}
           <VenueSection />
 
           {/* 7. Final Section (With All Our Hearts + WhatsApp Share + Calendar) */}

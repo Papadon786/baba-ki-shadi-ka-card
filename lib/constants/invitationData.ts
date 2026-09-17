@@ -23,6 +23,12 @@ export interface VenueInfo {
   event: string;
 }
 
+export interface ContactInfo {
+  display: string;
+  number: string;
+  label?: string;
+}
+
 export const invitationData = {
   host: {
     family: "The Family of Late Haji Mohammad Shahzade Khan",
@@ -44,7 +50,12 @@ export const invitationData = {
     groomShort: "Farhan",
     groomTitle: "SON OF LATE MOHAMMAD NAYEEM KHAN",
     tagline: "AS THEY BEGIN THEIR FOREVER",
-    openingQuote: "A love written in the stars",
+    openingQuote: "Join us for the union of two souls.",
+    quranVerse: {
+      arabic: "وَخَلَقْنَاكُمْ أَزْوَاجًا",
+      translation: "And we created you in pairs",
+      surah: "Quran 78:8",
+    },
     bismillah: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
     bismillahShort: "بِسْمِ الله",
     blessingText: "With the blessings of Allah Almighty, the families of Mohammad Farhan Khan and Arshiya Anees request your gracious presence and prayers on their sacred union.",
@@ -83,8 +94,8 @@ export const invitationData = {
           id: "barat",
           name: "BARAT",
           time: "6:00 PM",
-          note: "LEAVING FROM RESIDENCE",
-          location: "Akbarpur, Kanpur Dehat",
+          note: "LEAVING FOR THE WEDDING",
+          location: "Shanti Upvan, Rura Road, Akbarpur",
         },
       ],
     },
@@ -114,13 +125,31 @@ export const invitationData = {
       event: "Reception / Walima — Dec 12, 8:00 PM",
     },
     {
-      name: "Akbarpur Residence",
-      location: "Akbarpur, Kanpur Dehat",
-      description: "Family residence from where the grand Barat departs.",
-      mapsUrl: "https://maps.google.com/?q=Akbarpur+Kanpur+Dehat",
+      name: "Shanti Upvan",
+      location: "Rura Road, Akbarpur, Kanpur Dehat",
+      description: "Celebration venue & departure point on Rura Road, Akbarpur.",
+      mapsUrl: "https://maps.app.goo.gl/5ULWDV2d87xTsgWz9?g_st=iw",
       event: "Barat Departure — Dec 10, 6:00 PM",
     },
   ] as VenueInfo[],
+
+  contacts: [
+    {
+      display: "+91 70075 18696",
+      number: "+917007518696",
+      label: "Contact",
+    },
+    {
+      display: "+91 88081 86786",
+      number: "+918808186786",
+      label: "Contact",
+    },
+    {
+      display: "+91 80818 03909",
+      number: "+918081803909",
+      label: "Contact",
+    },
+  ] as ContactInfo[],
 
   dressCode: {
     title: "DRESS CODE",

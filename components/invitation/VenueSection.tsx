@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { invitationData } from "@/lib/constants/invitationData";
-import { ExternalLink, MapPin, Navigation, Copy, Check } from "lucide-react";
+import { ExternalLink, MapPin, Navigation, Copy, Check, PhoneCall } from "lucide-react";
 
 export default function VenueSection() {
   const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
@@ -94,6 +94,25 @@ export default function VenueSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Quick Venue Assistance Contacts */}
+      <div className="mt-8 flex flex-col items-center text-center">
+        <p className="font-cinzel text-[10px] tracking-[0.25em] text-[#dfba73]/85 uppercase font-medium mb-2.5">
+          Need assistance or directions? Call us:
+        </p>
+        <div className="flex items-center justify-center gap-2 flex-wrap max-w-[370px]">
+          {invitationData.contacts.map((contact, idx) => (
+            <a
+              key={idx}
+              href={`tel:${contact.number}`}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#3d0612]/80 hover:bg-[#5c1222] border border-[#dfba73]/40 hover:border-[#dfba73] text-[#dfba73] text-[11px] font-cinzel tracking-wider font-semibold transition-all shadow-xs active:scale-95"
+            >
+              <PhoneCall className="w-3 h-3 text-[#dfba73]" />
+              <span>{contact.display}</span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

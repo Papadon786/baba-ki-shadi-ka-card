@@ -46,7 +46,7 @@ export default function UnionBlessing() {
         </div>
 
         {/* Subtitle Badge */}
-        <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#3d0612]/80 border border-[#dfba73]/50 mb-3">
+        <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#3d0612]/80 border border-[#dfba73]/50 mb-3.5">
           <Sparkles className="w-2.5 h-2.5 text-[#dfba73]" />
           <p className="font-cinzel text-[9px] tracking-[0.3em] text-[#dfba73] uppercase font-bold">
             SACRED UNION &amp; BLESSINGS
@@ -54,8 +54,28 @@ export default function UnionBlessing() {
           <Sparkles className="w-2.5 h-2.5 text-[#dfba73]" />
         </div>
 
-        {/* Headline: "A love written in the stars" */}
-        <h2 className="font-pinyon text-4xl sm:text-5xl text-gold-gradient font-bold mb-4 drop-shadow-[0_2px_12px_rgba(223,186,115,0.35)]">
+        {/* Quranic Ayah Section (Surah An-Naba 78:8) */}
+        <div className="mb-3.5 flex flex-col items-center">
+          <p
+            dir="rtl"
+            lang="ar"
+            className="font-amiri text-3xl sm:text-[34px] leading-relaxed text-gold-gradient font-bold drop-shadow-[0_2px_10px_rgba(223,186,115,0.4)] tracking-wide mb-1 select-none"
+          >
+            {invitationData.couple.quranVerse.arabic}
+          </p>
+          <p className="font-cormorant text-base sm:text-lg text-[#faf2e4] font-semibold italic tracking-wide">
+            &ldquo;{invitationData.couple.quranVerse.translation}&rdquo;
+          </p>
+          <p className="font-cinzel text-[10px] tracking-[0.25em] text-[#dfba73]/85 uppercase font-medium mt-0.5">
+            ({invitationData.couple.quranVerse.surah})
+          </p>
+        </div>
+
+        {/* Subtle Gold Divider */}
+        <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-[#dfba73]/60 to-transparent mb-3.5" />
+
+        {/* Headline: "Join us for the union of two souls." */}
+        <h2 className="font-pinyon text-3xl sm:text-4xl text-gold-gradient font-bold mb-4 drop-shadow-[0_2px_12px_rgba(223,186,115,0.35)] leading-tight max-w-[320px]">
           {invitationData.couple.openingQuote}
         </h2>
 
