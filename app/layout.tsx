@@ -37,12 +37,13 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: "cover",
-  themeColor: "#1a0206",
+  themeColor: "#5c1222",
 };
 
 export const metadata: Metadata = {
-  title: "Arshiya & Farhan — Wedding Celebration",
-  description: "Together with their families, Arshiya & Farhan request the honour of your presence at their wedding celebration.",
+  title: "Dawat-e-Walima • Mohammad Farhan Khan & Arshiya Anees",
+  description:
+    "The Family of Late Haji Mohammad Shahzade Khan request the pleasure of your gracious presence at the Dawat-e-Walima of Mohammad Farhan Khan & Arshiya Anees on Saturday, 12th December 2026 at Shivam Palace, Keshavpuram, Kanpur.",
 };
 
 export default function RootLayout({
@@ -54,8 +55,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${cinzel.variable} ${cormorant.variable} ${pinyon.variable} ${amiri.variable} h-full antialiased selection:bg-amber-900 selection:text-amber-100`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full bg-[#070103] text-[#f7eee4] font-serif overflow-x-hidden antialiased">
+      <body
+        className="min-h-full bg-[#070103] text-[#f7eee4] font-serif overflow-x-hidden antialiased"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

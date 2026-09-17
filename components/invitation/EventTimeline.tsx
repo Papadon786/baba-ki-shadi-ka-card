@@ -11,42 +11,42 @@ export default function EventTimeline() {
 
   const cardThemes = [
     {
-      // Card 1: Milad & Manjha (Ivory & Saffron Gold Royal Parchment)
+      // Card 1: Milad & Manjha (Royal Light Maroon Velvet & Gold)
       cardBg:
-        "bg-gradient-to-br from-[#fefcf8] via-[#faf4e8] to-[#f5ebd6] text-[#2f1418] border-2 border-[#dfba73] shadow-[0_16px_40px_rgba(180,140,60,0.22)]",
-      badgeBg: "bg-[#f5ebd9] border-[#dfba73]/80 text-[#721020]",
-      titleColor: "text-[#6b0d1e]",
-      subtextColor: "text-[#4a242a]",
-      innerCardBg: "bg-white/85 border-[#dfba73]/50",
-      pillBg: "bg-[#f3e7d3] text-[#7a1224] border-[#dfba73]/60",
-      accentColor: "#b88d38",
+        "bg-gradient-to-br from-[#52101e] via-[#3a0814] to-[#26040c] text-[#faf2e4] border-2 border-[#dfba73] shadow-[0_18px_50px_rgba(74,13,27,0.35)]",
+      badgeBg: "bg-[#380712] border-[#dfba73]/60 text-gold-gradient",
+      titleColor: "text-gold-gradient",
+      subtextColor: "text-[#ecdccb]",
+      innerCardBg: "bg-[#28050e]/85 border-[#dfba73]/35",
+      pillBg: "bg-[#450917] text-[#dfba73] border-[#dfba73]/50",
+      accentColor: "#dfba73",
       stepNum: "01",
       shortName: "Milad & Manjha",
       dateLabel: "8 Dec",
     },
     {
-      // Card 2: The Barat (Royal Deep Crimson Velvet)
+      // Card 2: The Barat (Luxury Pearl White & Royal Gold)
       cardBg:
-        "bg-gradient-to-br from-[#29040d] via-[#1b0207] to-[#25030b] text-[#f7eee4] border-2 border-[#dfba73] shadow-[0_18px_45px_rgba(0,0,0,0.4)]",
-      badgeBg: "bg-[#3d0612] border-[#dfba73]/60 text-gold-gradient",
-      titleColor: "text-gold-gradient",
-      subtextColor: "text-[#d6beab]",
-      innerCardBg: "bg-[#180206]/80 border-[#dfba73]/30",
-      pillBg: "bg-[#450715] text-[#dfba73] border-[#dfba73]/40",
-      accentColor: "#dfba73",
+        "bg-gradient-to-br from-[#ffffff] via-[#fbf6ef] to-[#f4ede1] text-[#2b0b12] border-2 border-[#dfba73] shadow-[0_18px_50px_rgba(92,18,34,0.15)]",
+      badgeBg: "bg-[#5c1222] border-[#dfba73]/70 text-[#dfba73]",
+      titleColor: "text-[#380812]",
+      subtextColor: "text-[#682433]",
+      innerCardBg: "bg-[#ffffff] border-[#dfba73]/50 shadow-xs",
+      pillBg: "bg-[#5c1222] text-[#dfba73] border-[#dfba73]/60",
+      accentColor: "#5c1222",
       stepNum: "02",
       shortName: "The Barat",
       dateLabel: "10 Dec",
     },
     {
-      // Card 3: Reception & Walima (Regal Grand Banquet Burgundy)
+      // Card 3: Reception & Walima (Grand Light Maroon & Radiant Gold)
       cardBg:
-        "bg-gradient-to-br from-[#3b0612] via-[#22030a] to-[#2d050f] text-[#f7eee4] border-2 border-[#dfba73] shadow-[0_20px_50px_rgba(0,0,0,0.45)]",
-      badgeBg: "bg-[#420715] border-[#dfba73]/60 text-gold-gradient",
+        "bg-gradient-to-br from-[#5c1222] via-[#420a17] to-[#2e050f] text-[#faf2e4] border-2 border-[#dfba73] shadow-[0_20px_55px_rgba(74,13,27,0.4)]",
+      badgeBg: "bg-[#380712] border-[#dfba73]/60 text-gold-gradient",
       titleColor: "text-gold-gradient",
-      subtextColor: "text-[#d6beab]",
-      innerCardBg: "bg-[#1b0207]/80 border-[#dfba73]/30",
-      pillBg: "bg-[#4c0919] text-[#dfba73] border-[#dfba73]/40",
+      subtextColor: "text-[#ecdccb]",
+      innerCardBg: "bg-[#2c050f]/85 border-[#dfba73]/35",
+      pillBg: "bg-[#4a0918] text-[#dfba73] border-[#dfba73]/50",
       accentColor: "#dfba73",
       stepNum: "03",
       shortName: "Walima",
@@ -100,39 +100,40 @@ export default function EventTimeline() {
     <section
       ref={sectionRef}
       id="wedding-timeline"
-      className="relative w-full min-h-[220vh] bg-white border-y-2 border-[#dfba73]/50 flex flex-col items-center"
+      className="relative w-full min-h-[220vh] theme-pearl-white border-t border-[#dfba73]/35 flex flex-col items-center"
     >
-      {/* Subtle warm ambient gold radial accent */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] bg-[#dfba73]/10 rounded-full blur-[90px] pointer-events-none" />
+      {/* Warm ambient gold candlelight radial accent */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-[#dfba73]/[0.10] rounded-full blur-[100px] pointer-events-none" />
 
       {/* Sticky Deck Viewport pinned while scrolling through the 220vh track */}
       <div className="sticky top-8 sm:top-12 w-full flex flex-col items-center justify-start pt-4 sm:pt-6 pb-6 px-3 sm:px-4 z-10">
         {/* Top Gold Crest Ornament */}
         <div className="mb-2 opacity-95">
           <svg
-            width="60"
-            height="18"
+            width="64"
+            height="20"
             viewBox="0 0 70 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="drop-shadow-[0_2px_8px_rgba(223,186,115,0.4)]"
           >
             <path
               d="M35 2C33.5 5 28 8 20 8C14 8 8 5 4 2M35 2C36.5 5 42 8 50 8C56 8 62 5 66 2"
-              stroke="#b88d38"
+              stroke="#5c1222"
               strokeWidth="1.3"
               strokeLinecap="round"
             />
-            <circle cx="35" cy="10" r="2" fill="#b88d38" />
-            <circle cx="20" cy="8" r="1.5" fill="#b88d38" />
-            <circle cx="50" cy="8" r="1.5" fill="#b88d38" />
+            <circle cx="35" cy="10" r="2" fill="#5c1222" />
+            <circle cx="20" cy="8" r="1.5" fill="#5c1222" />
+            <circle cx="50" cy="8" r="1.5" fill="#5c1222" />
           </svg>
         </div>
 
         {/* Section Titles */}
-        <p className="font-cinzel text-[10px] sm:text-[11px] tracking-[0.28em] text-[#801024] uppercase font-bold text-center mb-1">
+        <p className="font-cinzel text-[10px] sm:text-[11px] tracking-[0.3em] text-[#5c1222] uppercase font-bold text-center mb-1">
           THE SACRED CELEBRATIONS
         </p>
-        <h2 className="font-pinyon text-3xl sm:text-4xl text-[#6b0d1e] font-normal text-center mb-2 drop-shadow-[0_1px_2px_rgba(107,13,30,0.15)]">
+        <h2 className="font-pinyon text-3xl sm:text-4xl text-[#380812] font-bold text-center mb-2.5 drop-shadow-[0_1px_3px_rgba(92,18,34,0.15)]">
           Wedding Timeline
         </h2>
 
@@ -145,10 +146,10 @@ export default function EventTimeline() {
                 key={idx}
                 onClick={() => scrollToDay(idx)}
                 type="button"
-                className={`px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-cinzel font-bold tracking-wider transition-all duration-300 flex items-center gap-1 cursor-pointer border ${
+                className={`px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-cinzel font-bold tracking-wider transition-all duration-300 flex items-center gap-1 cursor-pointer border ${
                   isActive
-                    ? "bg-[#6b0d1e] text-[#f7eee4] border-[#dfba73] shadow-[0_2px_10px_rgba(107,13,30,0.35)] scale-105"
-                    : "bg-[#faf5ed] text-[#6b0d1e] border-[#dfba73]/40 hover:border-[#dfba73] opacity-75 hover:opacity-100"
+                    ? "bg-gradient-to-r from-[#4a0d1b] to-[#6a1628] text-[#dfba73] border-[#dfba73] shadow-[0_2px_12px_rgba(74,13,27,0.3)] scale-105"
+                    : "bg-[#fffdf9] text-[#5c1222] border-[#dfba73]/60 hover:border-[#5c1222] hover:text-[#380812] shadow-xs"
                 }`}
               >
                 <span>{theme.dateLabel}</span>
@@ -260,13 +261,13 @@ export default function EventTimeline() {
 
         {/* Scroll Helper Prompt */}
         <div className="mt-3 text-center flex flex-col items-center gap-1">
-          <p className="font-cormorant text-xs italic text-[#8c6a28] flex items-center justify-center gap-1">
+          <p className="font-cormorant text-xs italic text-[#5c1222] font-semibold flex items-center justify-center gap-1">
             <span>
               {activeCardIndex === 2
-                ? "All cards stacked • Continue scrolling ↓"
+                ? "All events revealed • Continue scrolling ↓"
                 : "Scroll down to stack cards"}
             </span>
-            <ArrowDown className="w-3 h-3 animate-bounce text-[#b88d38]" />
+            <ArrowDown className="w-3 h-3 animate-bounce text-[#5c1222]" />
           </p>
           <div className="flex items-center gap-1.5 mt-0.5">
             {[0, 1, 2].map((i) => (
@@ -274,8 +275,8 @@ export default function EventTimeline() {
                 key={i}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   activeCardIndex === i
-                    ? "w-5 bg-[#6b0d1e]"
-                    : "w-1.5 bg-[#dfba73]/50"
+                    ? "w-5 bg-[#5c1222] shadow-[0_0_6px_rgba(92,18,34,0.3)]"
+                    : "w-1.5 bg-[#dfba73]/80"
                 }`}
               />
             ))}

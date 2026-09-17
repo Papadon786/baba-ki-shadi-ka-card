@@ -12,7 +12,6 @@ import ScratchDateCard from "@/components/invitation/ScratchDateCard";
 import StoryGallery from "@/components/invitation/StoryGallery";
 import EventTimeline from "@/components/invitation/EventTimeline";
 import VenueSection from "@/components/invitation/VenueSection";
-import DressCodeSection from "@/components/invitation/DressCodeSection";
 import FinalSection from "@/components/invitation/FinalSection";
 
 export default function Home() {
@@ -96,10 +95,7 @@ export default function Home() {
           {/* 6. The Venues (Shivam Palace & Akbarpur Residence + Google Maps) */}
           <VenueSection />
 
-          {/* 7. Dress Code (Pastels & Jewel Tones) */}
-          <DressCodeSection />
-
-          {/* 8. Final Section (With All Our Hearts + RSVP + WhatsApp Share + Calendar) */}
+          {/* 7. Final Section (With All Our Hearts + WhatsApp Share + Calendar) */}
           <FinalSection />
         </div>
       </InvitationShell>

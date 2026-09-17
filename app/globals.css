@@ -20,6 +20,20 @@
   --font-amiri: var(--font-amiri), serif;
 }
 
+/* Enhanced typography thickness for cursive script */
+.font-pinyon {
+  font-family: var(--font-pinyon), cursive;
+  font-weight: 700;
+  -webkit-text-stroke: 0.4px currentColor;
+  paint-order: stroke fill;
+}
+
+.text-gold-gradient.font-pinyon,
+.font-pinyon.text-gold-gradient {
+  -webkit-text-stroke: 0.4px rgba(223, 186, 115, 0.75);
+  paint-order: stroke fill;
+}
+
 /* Base resets and luxury styling */
 html {
   scroll-behavior: smooth;
@@ -31,6 +45,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--warm-ivory);
   font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 500;
   overflow-x: clip;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -67,14 +82,90 @@ body {
 }
 
 .royal-card {
-  background: linear-gradient(165deg, rgba(38, 4, 12, 0.85) 0%, rgba(20, 2, 6, 0.95) 100%);
-  border: 1px solid rgba(223, 186, 115, 0.3);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 235, 185, 0.2);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(165deg, rgba(42, 5, 14, 0.88) 0%, rgba(20, 2, 6, 0.96) 100%);
+  border: 1px solid rgba(223, 186, 115, 0.35);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 235, 185, 0.25);
+  backdrop-filter: blur(12px);
 }
 
 .royal-card-inner {
-  background: radial-gradient(circle at 50% 0%, rgba(70, 7, 20, 0.4) 0%, rgba(18, 2, 5, 0.9) 100%);
+  background: radial-gradient(circle at 50% 0%, rgba(85, 8, 25, 0.45) 0%, rgba(18, 2, 5, 0.95) 100%);
+}
+
+/* Royal gilded parchment plaque - warm ivory & antique gold mounted inside velvet */
+.royal-parchment-card {
+  background: linear-gradient(170deg, #fdfbf7 0%, #f7efe1 55%, #eddcc3 100%);
+  border: 1px solid rgba(184, 141, 56, 0.5);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(223, 186, 115, 0.18);
+  color: #2b0f14;
+}
+
+/* Alternating Theme 1: Royal Light Maroon */
+.theme-light-maroon {
+  background: radial-gradient(ellipse at 50% 20%, #4a0e1c 0%, #340813 60%, #24050d 100%);
+  color: #faf5ed;
+}
+
+.card-light-maroon {
+  background: linear-gradient(165deg, rgba(76, 15, 29, 0.94) 0%, rgba(44, 7, 16, 0.98) 100%);
+  border: 1px solid rgba(223, 186, 115, 0.45);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 235, 185, 0.25);
+  color: #faf5ed;
+}
+
+/* Alternating Theme 2: Luxury Pearl White & Royal Ivory */
+.theme-pearl-white {
+  background: radial-gradient(ellipse at 50% 15%, #ffffff 0%, #fbf7f0 50%, #f4ede1 100%);
+  color: #2b0b12;
+}
+
+.card-pearl-white {
+  background: linear-gradient(165deg, #ffffff 0%, #fcf8f2 55%, #f5ece0 100%);
+  border: 1px solid rgba(184, 141, 56, 0.45);
+  box-shadow: 0 14px 40px rgba(74, 14, 28, 0.08), 0 2px 10px rgba(223, 186, 115, 0.15), inset 0 0 25px rgba(223, 186, 115, 0.12);
+  color: #2b0b12;
+}
+
+.text-maroon {
+  color: #5c1222;
+}
+
+.text-maroon-dark {
+  color: #380812;
+}
+
+.text-maroon-muted {
+  color: #783545;
+}
+
+.border-maroon-subtle {
+  border-color: rgba(92, 18, 34, 0.2);
+}
+
+.badge-maroon {
+  background: linear-gradient(135deg, #5c1222 0%, #3d0713 100%);
+  color: #dfba73;
+  border: 1px solid rgba(223, 186, 115, 0.5);
+}
+
+/* Metallic gold shimmer animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(223, 186, 115, 0) 0%, rgba(253, 237, 201, 0.5) 50%, rgba(223, 186, 115, 0) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3.5s infinite;
+}
+
+.royal-velvet-section {
+  background: radial-gradient(ellipse at 50% 20%, #200308 0%, #0c0103 70%, #060002 100%);
 }
 
 /* Breathing animation for tap to open */

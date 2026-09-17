@@ -10,10 +10,38 @@ export default function AudioPlayer() {
   useEffect(() => {
     const audio = new Audio("/invitation/audio/soundtrack.mp3");
     audio.loop = true;
-    audio.volume = 0.5;
+    audio.volume = 0;
     audioRef.current = audio;
 
+    const startAudioWithFade = () => {
+      if (!audioRef.current) return;
+      audioRef.current
+        .play()
+        .then(() => {
+          setIsPlaying(true);
+          // Gentle volume ramp up to 0.45
+          let vol = 0;
+          const fadeInterval = setInterval(() => {
+            if (!audioRef.current) {
+              clearInterval(fadeInterval);
+              return;
+            }
+            vol = Math.min(0.45, vol + 0.05);
+            audioRef.current.volume = vol;
+            if (vol >= 0.45) clearInterval(fadeInterval);
+          }, 120);
+        })
+        .catch((e) => console.log("Auto-audio playback deferred:", e));
+    };
+
+    const handlePlayEvent = () => {
+      startAudioWithFade();
+    };
+
+    window.addEventListener("play-wedding-music", handlePlayEvent);
+
     return () => {
+      window.removeEventListener("play-wedding-music", handlePlayEvent);
       audio.pause();
       audio.src = "";
     };
@@ -25,6 +53,7 @@ export default function AudioPlayer() {
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
+      audioRef.current.volume = 0.45;
       audioRef.current
         .play()
         .then(() => setIsPlaying(true))

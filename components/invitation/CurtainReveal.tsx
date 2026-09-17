@@ -27,6 +27,11 @@ export default function CurtainReveal({ onRevealComplete }: CurtainRevealProps) 
     if (isAnimating || isOpened) return;
     setIsAnimating(true);
 
+    // Auto-start ambient wedding music upon explicit user interaction
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("play-wedding-music"));
+    }
+
     const tl = gsap.timeline({
       onComplete: () => {
         setIsOpened(true);
@@ -247,57 +252,60 @@ export default function CurtainReveal({ onRevealComplete }: CurtainRevealProps) 
         className="absolute inset-0 z-30 flex flex-col items-center justify-center pointer-events-auto cursor-pointer"
         onClick={handleOpen}
       >
-        <div className="animate-breathing flex flex-col items-center justify-center px-8 py-5 rounded-full bg-[#180206]/50 border border-[#dfba73]/30 backdrop-blur-xs shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
+        <div className="animate-breathing flex flex-col items-center justify-center px-10 py-6 rounded-full bg-[#180206]/75 border-2 border-[#dfba73]/50 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(223,186,115,0.25)] relative overflow-hidden group">
+          {/* Subtle gold shimmer streak */}
+          <div className="absolute inset-0 animate-shimmer pointer-events-none opacity-30" />
+
           {/* Top Baroque Gold Crest */}
-          <div className="mb-2 opacity-90">
+          <div className="mb-2.5 opacity-95">
             <svg
-              width="68"
-              height="20"
+              width="76"
+              height="24"
               viewBox="0 0 68 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+              className="drop-shadow-[0_2px_8px_rgba(223,186,115,0.5)]"
             >
               <path
                 d="M34 2C32.5 5 28 8 20 8C14 8 8 5 4 2M34 2C35.5 5 40 8 48 8C54 8 60 5 64 2"
                 stroke="#dfba73"
-                strokeWidth="1.2"
+                strokeWidth="1.4"
                 strokeLinecap="round"
               />
               <path
                 d="M34 0C32.8 3.5 29 6 25 7C29 8 32.8 10.5 34 14C35.2 10.5 39 8 43 7C39 6 35.2 3.5 34 0Z"
                 fill="#dfba73"
               />
-              <circle cx="20" cy="8" r="1.5" fill="#dfba73" />
-              <circle cx="48" cy="8" r="1.5" fill="#dfba73" />
-              <circle cx="12" cy="6" r="1" fill="#dfba73" opacity="0.7" />
-              <circle cx="56" cy="6" r="1" fill="#dfba73" opacity="0.7" />
+              <circle cx="20" cy="8" r="1.8" fill="#dfba73" />
+              <circle cx="48" cy="8" r="1.8" fill="#dfba73" />
+              <circle cx="12" cy="6" r="1.2" fill="#dfba73" opacity="0.8" />
+              <circle cx="56" cy="6" r="1.2" fill="#dfba73" opacity="0.8" />
             </svg>
           </div>
 
           {/* Main "tap to open" text */}
-          <h2 className="font-cormorant text-2xl sm:text-3xl font-normal tracking-[0.2em] text-[#faf3e3] lowercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
+          <h2 className="font-cormorant text-2xl sm:text-3xl font-medium tracking-[0.22em] text-gold-gradient lowercase drop-shadow-[0_2px_12px_rgba(223,186,115,0.4)]">
             tap to open
           </h2>
 
           {/* Bottom Flourish Separator Line */}
-          <div className="mt-2.5 flex items-center gap-2 opacity-85">
-            <span className="w-10 sm:w-14 h-[1px] bg-gradient-to-r from-transparent to-[#dfba73]" />
+          <div className="mt-2.5 flex items-center gap-2 opacity-90">
+            <span className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-transparent to-[#dfba73]" />
             <svg
-              width="24"
-              height="10"
+              width="26"
+              height="12"
               viewBox="0 0 24 10"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12 1L14 5L12 9L10 5L12 1Z"
+                d="M12 1L15 5L12 9L9 5L12 1Z"
                 fill="#dfba73"
               />
-              <circle cx="5" cy="5" r="1.2" fill="#dfba73" />
-              <circle cx="19" cy="5" r="1.2" fill="#dfba73" />
+              <circle cx="4" cy="5" r="1.4" fill="#dfba73" />
+              <circle cx="20" cy="5" r="1.4" fill="#dfba73" />
             </svg>
-            <span className="w-10 sm:w-14 h-[1px] bg-gradient-to-l from-transparent to-[#dfba73]" />
+            <span className="w-12 sm:w-16 h-[1px] bg-gradient-to-l from-transparent to-[#dfba73]" />
           </div>
         </div>
       </div>

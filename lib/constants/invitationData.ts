@@ -24,16 +24,30 @@ export interface VenueInfo {
 }
 
 export const invitationData = {
+  host: {
+    family: "The Family of Late Haji Mohammad Shahzade Khan",
+    requestText: "request the pleasure of your gracious presence and blessings on the joyous occasion of the",
+    occasion: "DAWAT-E-WALIMA",
+    relation: "of their grandson",
+    withBlessings: "WITH THE BLESSINGS OF ALLAH ALMIGHTY",
+    primaryDate: "Saturday, 12th December 2026",
+    primaryTime: "8:00 PM",
+    primaryVenue: "Shivam Palace",
+    primaryVenueCity: "Keshavpuram, Kanpur",
+  },
+
   couple: {
-    bride: "Arshiya",
-    brideTitle: "DAUGHTER OF",
-    groom: "Farhan",
-    groomTitle: "SON OF",
-    tagline: "AS THEY BEGIN THEIR FOREVER.",
+    bride: "Arshiya Anees",
+    brideShort: "Arshiya",
+    brideTitle: "DAUGHTER OF MR. MOHD ANEES",
+    groom: "Mohammad Farhan Khan",
+    groomShort: "Farhan",
+    groomTitle: "SON OF LATE MOHAMMAD NAYEEM KHAN",
+    tagline: "AS THEY BEGIN THEIR FOREVER",
     openingQuote: "A love written in the stars",
-    bismillah: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
+    bismillah: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
     bismillahShort: "بِسْمِ الله",
-    blessingText: "With the blessings of Allah, Farhan and Arshiya invite you to share in the joy of their union.",
+    blessingText: "With the blessings of Allah Almighty, the families of Mohammad Farhan Khan and Arshiya Anees request your gracious presence and prayers on their sacred union.",
   },
   
   datesOverview: "8 — 12 DECEMBER 2026",
