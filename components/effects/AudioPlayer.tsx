@@ -64,7 +64,8 @@ export default function AudioPlayer() {
   return (
     <button
       onClick={toggleAudio}
-      aria-label={isPlaying ? "Mute atmospheric music" : "Play atmospheric music"}
+      title="Assubuhu Bada Part 2 (Lofi) - Urooj Fatima Ansari"
+      aria-label={isPlaying ? "Mute music (Assubuhu Bada Part 2 Lofi)" : "Play music (Assubuhu Bada Part 2 Lofi)"}
       className="fixed top-4 left-4 z-50 flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur-md bg-black/50 border border-[#dfba73]/40 text-[#dfba73] hover:border-[#dfba73] hover:bg-black/70 transition-all duration-300 shadow-lg group cursor-pointer"
     >
       {isPlaying ? (
