@@ -43,7 +43,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Dawat-e-Walima • Mohammad Farhan Khan & Arshiya Anees",
   description:
-    "The Family of Late Haji Mohammad Shahzade Khan request the pleasure of your gracious presence at the Dawat-e-Walima of Mohammad Farhan Khan & Arshiya Anees on Saturday, 12th December 2026 at Shivam Palace, Keshavpuram, Kanpur.",
+    "Mr. & Mrs. Late Haji Mohammad Shahzade Khan request the pleasure of your gracious presence at the Dawat-e-Walima of Mohammad Farhan Khan & Arshiya Anees on Saturday, 12th December 2026 at Shivam Palace, Keshavpuram, Kanpur.",
 };
 
 export default function RootLayout({

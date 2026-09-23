@@ -15,7 +15,7 @@ export default function FinalSection() {
     }, 2500);
   };
   const handleShareWhatsApp = () => {
-    const text = `✨ Dawat-e-Walima & Royal Wedding Invitation ✨\n\n${invitationData.host.family} request the pleasure of your gracious presence and blessings on the joyous occasion of the *DAWAT-E-WALIMA* of their grandson\n\n*${invitationData.couple.groom}*\n(Son of Late Mohammad Nayeem Khan)\nwith\n*${invitationData.couple.bride}*\n(Daughter of Mr. Mohd Anees)\n\n📅 ${invitationData.host.primaryDate} at ${invitationData.host.primaryTime}\n📍 ${invitationData.host.primaryVenue}, ${invitationData.host.primaryVenueCity}\n\nView the interactive luxury wedding card: ${window.location.href}`;
+    const text = `✨ Dawat-e-Walima & Royal Wedding Invitation ✨\n\n${invitationData.host.family} request the pleasure of your gracious presence and blessings on the joyous occasion of the *DAWAT-E-WALIMA* of their grandson\n\n*${invitationData.couple.groom}*\n(Son of Late Mohammad Nayeem Khan)\nwith\n*${invitationData.couple.bride}*\n(Daughter of Mr. Mohd Anees)\n\n📅 ${invitationData.host.primaryDate} at ${invitationData.host.primaryTime}\n📍 ${invitationData.host.primaryVenue}, ${invitationData.host.primaryVenueCity}\n\n✨ Welcome from Khan Family ✨\n\nView the interactive luxury wedding card: ${window.location.href}`;
     window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank");
   };
 
@@ -23,7 +23,7 @@ export default function FinalSection() {
     const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
       "Dawat-e-Walima: Mohammad Farhan Khan & Arshiya Anees"
     )}&dates=20261212T143000Z/20261212T183000Z&details=${encodeURIComponent(
-      "Dawat-e-Walima of Mohammad Farhan Khan & Arshiya Anees. Hosted by The Family of Late Haji Mohammad Shahzade Khan."
+      "Dawat-e-Walima of Mohammad Farhan Khan & Arshiya Anees. Hosted by Mr. & Mrs. Late Haji Mohammad Shahzade Khan."
     )}&location=${encodeURIComponent("Shivam Palace, Keshavpuram, Kanpur")}`;
     window.open(calendarUrl, "_blank");
   };
@@ -170,6 +170,76 @@ export default function FinalSection() {
         <span className="font-cinzel text-[9px] tracking-[0.32em] text-[#783545] font-bold uppercase">
           SATURDAY, 12TH DECEMBER 2026 • KANPUR, INDIA
         </span>
+      </div>
+
+      {/* Decorative Royal Divider */}
+      <div className="flex items-center justify-center gap-3 mt-8 mb-6 w-full max-w-[260px]">
+        <span className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-[#dfba73]/60 to-[#dfba73]" />
+        <span className="text-[#dfba73] text-sm drop-shadow-[0_0_6px_rgba(223,186,115,0.5)]">✦</span>
+        <span className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-[#dfba73]/60 to-[#dfba73]" />
+      </div>
+
+      {/* ========================================================================= */}
+      {/* GRAND FINALE: WELCOME FROM KHAN FAMILY                                    */}
+      {/* ========================================================================= */}
+      <div className="w-full max-w-[360px] relative">
+        <div className="relative p-6 sm:p-7 rounded-[26px] bg-gradient-to-br from-[#420a17] via-[#2c050f] to-[#1a0108] border-2 border-[#dfba73]/75 shadow-[0_16px_40px_rgba(43,11,18,0.28)] text-center flex flex-col items-center overflow-hidden">
+          {/* Subtle gold radial shimmer background */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(223,186,115,0.18),transparent_70%)] pointer-events-none" />
+
+          {/* Ornate Corner Accents */}
+          <div className="absolute top-2.5 left-2.5 w-4 h-4 border-t-2 border-l-2 border-[#dfba73]/80 pointer-events-none" />
+          <div className="absolute top-2.5 right-2.5 w-4 h-4 border-t-2 border-r-2 border-[#dfba73]/80 pointer-events-none" />
+          <div className="absolute bottom-2.5 left-2.5 w-4 h-4 border-b-2 border-l-2 border-[#dfba73]/80 pointer-events-none" />
+          <div className="absolute bottom-2.5 right-2.5 w-4 h-4 border-b-2 border-r-2 border-[#dfba73]/80 pointer-events-none" />
+
+          {/* Top Royal Floral Crest */}
+          <div className="mb-2 flex items-center justify-center gap-2.5">
+            <span className="w-7 sm:w-10 h-[1px] bg-gradient-to-r from-transparent via-[#dfba73] to-transparent" />
+            <svg
+              width="30"
+              height="20"
+              viewBox="0 0 32 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-[#dfba73] drop-shadow-[0_0_8px_rgba(223,186,115,0.6)]"
+            >
+              <path
+                d="M16 2C14.5 5 10 7 4 7M16 2C17.5 5 22 7 28 7M16 2V18M11 14C13 16 15 17.5 16 18C17 17.5 19 16 21 14"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle cx="16" cy="2" r="1.8" fill="currentColor" />
+            </svg>
+            <span className="w-7 sm:w-10 h-[1px] bg-gradient-to-r from-transparent via-[#dfba73] to-transparent" />
+          </div>
+
+          <span className="inline-block px-3.5 py-1 rounded-full bg-[#dfba73]/15 border border-[#dfba73]/40 text-[#fdedc9] font-cinzel text-[10px] tracking-[0.32em] uppercase font-bold mb-1.5">
+            {invitationData.welcome.badge}
+          </span>
+
+          <h3 className="font-pinyon text-4xl sm:text-5xl text-gold-gradient font-bold drop-shadow-[0_2px_12px_rgba(223,186,115,0.4)] my-1 leading-tight">
+            {invitationData.welcome.family}
+          </h3>
+
+          <div className="flex items-center justify-center gap-2 my-2">
+            <span className="w-6 h-[1px] bg-[#dfba73]/50" />
+            <span className="text-[#dfba73] text-xs">❦</span>
+            <span className="w-6 h-[1px] bg-[#dfba73]/50" />
+          </div>
+
+          <p className="font-cormorant text-base sm:text-lg italic text-[#fdedc9]/90 font-medium max-w-[280px] leading-relaxed">
+            &ldquo;{invitationData.welcome.message}&rdquo;
+          </p>
+
+          <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-[#dfba73]/40 to-transparent my-3" />
+
+          <p className="font-cinzel text-[9px] tracking-[0.22em] text-[#dfba73]/80 uppercase font-semibold">
+            {invitationData.welcome.compliments}
+          </p>
+        </div>
       </div>
     </section>
   );

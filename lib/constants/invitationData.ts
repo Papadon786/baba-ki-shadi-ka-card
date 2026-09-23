@@ -31,7 +31,7 @@ export interface ContactInfo {
 
 export const invitationData = {
   host: {
-    family: "The Family of Late Haji Mohammad Shahzade Khan",
+    family: "Mr. & Mrs. Late Haji Mohammad Shahzade Khan",
     requestText: "request the pleasure of your gracious presence and blessings on the joyous occasion of the",
     occasion: "DAWAT-E-WALIMA",
     relation: "of their grandson",
@@ -58,7 +58,7 @@ export const invitationData = {
     },
     bismillah: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
     bismillahShort: "بِسْمِ الله",
-    blessingText: "With the blessings of Allah Almighty, the families of Mohammad Farhan Khan and Arshiya Anees request your gracious presence and prayers on their sacred union.",
+    blessingText: "With the blessings of Allah Almighty, the family of Mohammed Azaz Khan request your gracious presence and prayers on their sacred union.",
   },
   
   datesOverview: "8 — 12 DECEMBER 2026",
@@ -162,5 +162,12 @@ export const invitationData = {
     heading: "Your presence is our present",
     message: "Your love, prayers and presence are the greatest gifts as we embark on this sacred journey together.",
     subheading: "We can't wait to celebrate with you",
+  },
+
+  welcome: {
+    badge: "WELCOME FROM",
+    family: "Khan Family",
+    message: "Awaiting your gracious presence, prayers and warm blessings.",
+    compliments: "With Best Compliments From All Relatives & Friends",
   },
 };
